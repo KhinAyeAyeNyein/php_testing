@@ -7,7 +7,8 @@
     <title>Tutorial_1</title>
 </head>
 <body>
-    <table>
+    <h1 class='header'>Tutorial_1 Chess Board</h1>
+    <table cellspacing= "0px" cellpadding="0px">
        <?php
         for ($i=0; $i<8; $i++) {
             echo "<tr>";
