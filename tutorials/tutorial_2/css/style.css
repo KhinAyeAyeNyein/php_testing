@@ -1,0 +1,11 @@
+@charset "utf-8";
+body {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 20px;
+}
+.php-body {
+    font-size: 25px;
+}
