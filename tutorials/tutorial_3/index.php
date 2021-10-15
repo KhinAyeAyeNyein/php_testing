@@ -33,7 +33,7 @@ function getAge($dob){
     return 'You are not born yet.';
   }
   else {
-    $age = $today->diff($b_day);
+    $age = date_diff($b_day, $today);
     return 'Your age is : '.$age->d.' days, '.$age->m.' month, and '.$age->y.' years.';
   }
 }
