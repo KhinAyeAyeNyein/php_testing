@@ -12,7 +12,7 @@
     <div class='body'>
         <form>
             <div class='input'>
-            <input type="date" name="dob" value="<?php echo (isset($_GET['dob'])) ?$_GET['dob']:'';?>">                
+            <input type="date" name="dob" value="<?php echo "" .$_GET['dob'];?>">                
             <input type="submit" value="Calculate Age">
             </div>
         </form>
@@ -33,7 +33,7 @@ function getAge($dob){
     return 'You are not born yet.';
   }
   else {
-    $age = date_diff($b_day, $today);
+    $age= date_diff($b_day, $today);
     return 'Your age is : '.$age->d.' days, '.$age->m.' month, and '.$age->y.' years.';
   }
 }
