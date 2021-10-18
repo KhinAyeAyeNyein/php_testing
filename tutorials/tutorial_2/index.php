@@ -12,21 +12,21 @@
     <div class='php-body'>
         <?php
             $n=6;
-            for ($i=1; $i<=$n-1; $i++) {
-                for ($j=1; $j<=$i; $j++) {
-                    echo "*";
+            for ($row=1; $row<=$n-1; $row++) { //for pramid style triangle
+                for ($col=1; $col<=$row; $col++) {
+                    echo "*"; //for all the front stars
                 }
-                for ($j=2; $j<=$i; $j++) {
-                    echo "*";
+                for ($col=2; $col<=$row; $col++) {
+                    echo "*"; //for the back stars to form a pramid style
                 }
                 echo "<br>";
             }
-            for ($i=1; $i<=$n; $i++) {
-                for ($j=$i; $j<=$n; $j++) {
-                    echo "*";
+            for ($row=1; $row<=$n; $row++) { //for upback-down pramid style triangle
+                for ($col=$row; $col<=$n; $col++) {
+                    echo "*";  //for all the front stars 
                 }
-                for ($j=$i+1; $j<=$n; $j++) {
-                    echo "*";
+                for ($col=$row+1; $col<=$n; $col++) {
+                    echo "*";  //for all the side stars 
                 }
                 echo "<br>";
             }
