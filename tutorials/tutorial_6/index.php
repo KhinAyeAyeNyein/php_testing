@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1 class="header">Turorial - Upload image into selected folder.</h1>
-	<form class="form" method="post" enctype="multipart/form-data">
+	<form class="form" method="post" enctype="multipart/form-data"> <!--Creating a form to upload image-->
 		<label>Targeted Dir</label>
 		<input class="input" type="text" name="dir_name">
 		<br>
@@ -21,21 +21,26 @@
 </html>
 <?php
 
-$image=$_FILES['img'];
+$image=$_FILES["img"];
 $uploadOk = 1;
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {  //file is upload or not
     if($_POST['dir_name'] != "") {
-        $tar_dir = $_POST['dir_name'];
+        $tar_dir = $_POST['dir_name'];  
         if(!is_dir($tar_dir)){
-            mkdir($tar_dir);
+            mkdir($tar_dir);    //creating dir if dir does not exit yet.
         }
         $target_file = $tar_dir . basename($_FILES["img"]["name"]);
         $check = getimagesize($_FILES["img"]["tmp_name"]);
         if($check !== false) {
-            echo "<p class=upload>Image file ".$check["mime"] ." is uploaded into below folder.<br>";
-            echo $tar_dir."</p>";
             $uploadOk = 1;
-            move_uploaded_file($image['tmp_name'],$tar_dir."/".$image['name']);
+            if(file_exists($target_file)){
+                echo "File already exists.";
+                $uploadOk = 0;
+            }else {
+                echo "<p class=upload>Image file ".$check["mime"] ." is uploaded into below folder.<br>";
+                echo $tar_dir."</p>";
+                move_uploaded_file($image['tmp_name'],$tar_dir."/".$image['name']);
+            }
 
         } else {
             echo "<p class=upload>File is not an image.</p>";
