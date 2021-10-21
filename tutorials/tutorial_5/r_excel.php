@@ -12,7 +12,7 @@
         use PhpOffice\PhpSpreadsheet\Spreadsheet;
         use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
         //include the file that loads the PhpSpreadsheet classes
-        require 'C:/Users/77/Downloads/spreadsheet/vendor/autoload.php';
+        require '../../spreadsheet/vendor/autoload.php';
 
         //create directly an object instance of the IOFactory class, and load the xlsx file
         $fxls ='Files2read/T5_excel.xlsx';
