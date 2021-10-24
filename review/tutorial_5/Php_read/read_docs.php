@@ -8,7 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div id="docs">
         <?php
             $docObj = new DocxConversion("../Files2read/T5_docs.docx");
@@ -51,11 +50,16 @@ class DocxConversion{
         $content = '';
 
         $zip = zip_open($this->filename);
-
+        /* if there is no docx file, 
+         * return false coz there is nothing to read 
+         */
         if (!$zip || is_numeric($zip)) {
             return false;
         } 
-
+        /* entering while loop to read docs file
+         * by extracting zip file to extract 
+         * texts from word file
+         */
         while ($zip_entry = zip_read($zip)) {
             if (zip_entry_open($zip, $zip_entry) == false) {
                 continue;
