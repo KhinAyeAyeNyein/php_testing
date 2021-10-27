@@ -9,7 +9,7 @@
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
     require 'config.php';
-    
+
     if(isset($_POST["email"])) {
 
         $emailTo = $_POST["email"];
@@ -23,12 +23,13 @@
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = '123demo456demo@gmail.com';                     //SMTP username
-            $mail->Password   = 'incorr3ct';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Password   = 'incorr3ct';                            //SMTP password
+            $mail->IsSMTP();                             
+            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('123demo456demo@gmail.com', 'Mailer');
+            $mail->setFrom('123demo456user@gmail.com', 'Mailer');
             $mail->addAddress($emailTo);     //Add a recipient
             $mail->addReplyTo('no-reply@gmail.com', 'Information');
 
