@@ -10,7 +10,7 @@
 
 <body>
     <h1 class='header'>Tutorial_1 Chess Board</h1>
-    <table cellspacing="0px" cellpadding="0px"> <!-- to not have gaps between border and chess board -->
+    <table cellspacing="0px" cellpadding="0px"> <!-- to not have gaps between each cell -->
         <?php
         for ($row=0; $row<8; $row++) {
             echo "<tr>";

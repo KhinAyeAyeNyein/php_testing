@@ -8,18 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-	session_start();
-	if(isset($_SESSION['username'])){
-		header("location:login.php");
-		exit;
-	}
-?>
     <h1 class="header">Tutorial - Login/Logout</h1>
+    <!-- Login form -->
     <div class="form" >
         <form action="login.php" method="post">
-            Username : <input class="input" type="text" name = "usrname"> <br>
-            Password : <input class="input" type="password" name = "pwd"> <br>
+            <label >Username : </label>
+            <input class="input" type="text" name = "usrname"> <br>
+            <label >Password : </label>
+            <input class="input" type="password" name = "pwd"> <br>
             <input class="input" type="submit" name="Login" value="Login">
         </form>
     </div>
