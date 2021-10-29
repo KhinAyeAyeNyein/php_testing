@@ -1,0 +1,27 @@
+@charset "utf-8";
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+.header {
+    font-size: 20px;
+}
+.form {
+    background-color: #eee;
+    width: 46%;
+    text-align: left;
+    padding: 0 2%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.input {
+    margin: 5px 0 ;
+}
+.upload {
+    background-color: rgb(145, 187, 173);
+    width: 50%;
+    margin: 5px auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
