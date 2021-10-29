@@ -1,0 +1,36 @@
+@charset "utf-8";
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+#docs,
+#excel,
+#text,
+#csv {
+    background-color: #eee;
+    color: #000;
+    font-size: 18px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px auto;
+}
+#excel table {
+    margin: 0 auto;
+}
+#table {
+    background-color: #81554e;
+    color: #eee;
+    font-size: 15px;
+    padding: 3px;
+}
+.back {
+    text-decoration: none;
+    color: rgb(167, 65, 65);
+    font-size: 15px;
+    background-color: rgb(8, 32, 41);
+    padding: 3px 5px;
+}
+.back:hover {
+    background-color: rgba(8, 32, 41, 0.8);
+    color: rgb(228, 60, 60);
+}
