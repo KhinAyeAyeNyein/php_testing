@@ -9,6 +9,7 @@
     {
         use SoftDeletes;
         protected $fillable = [
+            'id',
             'student_id',
             'Myanmar',
             'English',

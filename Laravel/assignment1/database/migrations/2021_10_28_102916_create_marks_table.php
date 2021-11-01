@@ -15,6 +15,7 @@ class CreateMarksTable extends Migration
     {
         Schema::create('marks', function (Blueprint $table) {
             $table->id();
+            $table->integer('student_id');
             $table->foreignId('student_id')->references('id')->on('students');
             $table->integer('Myanmar');
             $table->integer('English');

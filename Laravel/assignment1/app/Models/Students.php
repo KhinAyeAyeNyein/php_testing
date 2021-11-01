@@ -9,6 +9,7 @@
     {
         use SoftDeletes;
         protected $fillable = [
+        'id',
         'name',
         'roll_Number',
         'class',
