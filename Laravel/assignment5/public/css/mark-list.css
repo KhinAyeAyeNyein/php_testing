@@ -1,0 +1,20 @@
+.search-input {
+    width: 160px;
+    margin: 0px 5px;
+}
+
+.search-bar {
+    float: left;
+    margin: 0px;
+}
+
+.search-btn {
+    width: 150px;
+    margin: 0px 5px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3490dc;
+    border-color: #3490dc;
+    margin-right: 5px;
+}
